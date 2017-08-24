@@ -32,3 +32,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Scavengers/Library/
+RollABall/Roll A Ball/Library/
+Space Shooter/Library/
+RollABall/Roll A Ball/Bin/
+Space Shooter/Temp/UnityLockfile
+Space Shooter/Temp/
