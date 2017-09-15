@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButton("Fire1") && Time.time > nextFire) {
-			Instantiate(Bolt,BoltSpawn.position,BoltSpawn.rotation);
+			var rot = new Quaternion(0,BoltSpawn.rotation.y,BoltSpawn.rotation.z,BoltSpawn.rotation.w);
+			Instantiate(Bolt,BoltSpawn.position,rot);
 			nextFire = Time.time + Cooldown;
 		}
 	}
