@@ -34,7 +34,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		if (Input.GetButton("Fire1") && Time.time > nextFire) {
 			var rot = new Quaternion(0,BoltSpawn.rotation.y,BoltSpawn.rotation.z,BoltSpawn.rotation.w);
-			Instantiate(Bolt,BoltSpawn.position,rot);
+			var spawn = new Vector3(BoltSpawn.position.x, 0, BoltSpawn.position.z);
+			Instantiate(Bolt,spawn,rot);
 			nextFire = Time.time + Cooldown;
 		}
 	}
